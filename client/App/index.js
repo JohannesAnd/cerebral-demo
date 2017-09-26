@@ -15,18 +15,17 @@ export default connect(
   class App extends Component {
     render() {
       // Make a Todo-component for each todo
-      const todos = this.props.todos
-        ? this.props.todos.map((todo, index) => <Todo key={index}>{todo}</Todo>)
-        : null;
-
+      const todos = Object.keys(this.props.todos || {}).map(todoKey => (
+        <Todo key={todoKey} todoKey={todoKey} />
+      ));
       return (
         <Wrapper>
           <Text>{'My todos'}</Text>
-          {todos}
           {/*Trigger the signal when the button is clicked*/}
           <Button onClick={() => this.props.addTodoClicked({ todo: 'Foo!' })}>
             {'Add new todo'}
           </Button>
+          {todos}
         </Wrapper>
       );
     }

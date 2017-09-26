@@ -1,5 +1,4 @@
-import { push } from 'cerebral/operators';
-import { state, props } from 'cerebral/tags';
+import setTodo from '../actions/setTodo';
 
-// Push the new todo onto the list of todos
-export default [push(state`app.todos`, props`todo`)];
+// Add the new todo onto the object of todos
+export default [setTodo];

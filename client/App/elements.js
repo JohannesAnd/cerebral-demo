@@ -1,10 +1,11 @@
 import styled from 'styled-components';
 
+import TodoComponent from './Todo';
+
 export const Wrapper = styled.div`
   width: 100vw;
   height: 100vh;
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
 `;
@@ -19,7 +20,7 @@ export const Button = styled.button`
   width: 100px;
 `;
 
-export const Todo = styled.p`
+export const Todo = styled(TodoComponent)`
   border-top: 1px solid gray;
   display: block;
 `;
