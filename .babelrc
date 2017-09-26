@@ -8,7 +8,7 @@
           "client": "./client",
           "configs": "./configs",
           "computed": "./client/computed",
-          "components": "./components",
+          "components": "./client/components",
           "modules": "./client/modules",
           "utils": "./utils"
         }

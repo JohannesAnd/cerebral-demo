@@ -20,7 +20,4 @@ export const Button = styled.button`
   width: 100px;
 `;
 
-export const Todo = styled(TodoComponent)`
-  border-top: 1px solid gray;
-  display: block;
-`;
+export const Todo = styled(TodoComponent)`border-top: 1px solid gray;`;
